@@ -6,7 +6,7 @@ function printColorMap() {
     const minorColors = ["Blue", "Orange", "Green", "Brown", "Slate"];
     for (let i = 0; i < majorColors.length; i++) {
         for (let j = 0; j < minorColors.length; j++) {
-            let pairNumber = i * 5 + j
+            let pairNumber = (i * 5 + j)+1
             let colorPair={}
             colorPair[pairNumber] = [majorColors[i],minorColors[j]]
             colorPairs.push(colorPair)

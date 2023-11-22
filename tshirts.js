@@ -1,12 +1,14 @@
 const {expect} = require('chai');
 
 function size(cms) {
-    if (cms < 38) {
+    if (cms>0 && cms < 38) {
         return 'S';
-    } else if (cms > 38 && cms < 42) {
+    } else if (cms >= 38 && cms < 42) {
         return 'M';
-    } else {
+    } else if (cms >= 42 && cms <= 142){
         return 'L';
+    }else{
+        return 'Invalid cms';
     }
 }
 
