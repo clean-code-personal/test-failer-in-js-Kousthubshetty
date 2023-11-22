@@ -1,11 +1,11 @@
 const {expect} = require('chai')
 const{alertInCelcius,alertFailure}= require('./alerter')
+const{networkAlertStubSuccess,networkAlertStubFailed}=require('./alerter.mock')
 
-alertInCelcius(400.5);
-alertInCelcius(303.6);
+alertInCelcius(400.5,networkAlertStubSuccess);
+alertInCelcius(303.6,networkAlertStubFailed);
 
-alertInCelcius(1000);
 console.log(`${alertFailure['count']} alerts failed.`);
-// expect(alertFailureCount).equals(1);
+expect(alertFailure['count']).equals(1);
 
 console.log('All is well');
