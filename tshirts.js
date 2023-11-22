@@ -10,8 +10,6 @@ function size(cms) {
     }
 }
 
-console.log(size(-1))
-
 expect(size(37)).equals('S');
 expect(size(40)).equals('M');
 expect(size(43)).equals('L');
